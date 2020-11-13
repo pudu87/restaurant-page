@@ -1,0 +1,87 @@
+body {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 20px; }
+  body * {
+    box-sizing: border-box; }
+
+#content {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/potatoes.jpg"); }
+
+header {
+  max-width: 100%;
+  height: 120px;
+  font-size: 4em;
+  text-align: center;
+  line-height: 120px;
+  color: white;
+  text-shadow: 5px 5px .1em;
+  background-color: rgba(4, 0, 255, 0.1); }
+
+nav {
+  max-width: 100%;
+  height: 120px;
+  padding: 0 20%;
+  background-color: rgba(255, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center; }
+  nav div {
+    text-align: center; }
+
+section {
+  max-width: 100%;
+  min-height: 400px;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: grid; }
+
+.home {
+  align-items: center; }
+  .home article {
+    text-align: center;
+    font-size: 2em;
+    color: black; }
+  .home p {
+    line-height: 1.4; }
+
+.menu {
+  grid-template-columns: 30% 30% 30%;
+  justify-content: center;
+  align-items: center; }
+  .menu article {
+    height: 200px;
+    margin: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px; }
+  .menu div {
+    height: 100px;
+    width: 120px;
+    margin: 20px auto;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-size: cover; }
+  .menu div.mashed {
+    background-image: url("../img/mashed.jpg"); }
+  .menu div.fried {
+    background-image: url("../img/fried.jpeg"); }
+  .menu div.boiled {
+    background-image: url("../img/boiled.jpg"); }
+  .menu p {
+    text-align: center;
+    line-height: 1.4; }
+
+.contact {
+  grid-template-columns: 30%;
+  grid-template-rows: 100px 100px;
+  justify-content: center;
+  padding-top: 50px; }
+  .contact article {
+    margin: 20px;
+    text-align: left; }
+  .contact h2 {
+    font-size: 1.5em;
+    line-height: 1.5; }
+  .contact p {
+    margin-left: 2em; }
