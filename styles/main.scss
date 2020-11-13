@@ -1,0 +1,101 @@
+body {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 20px;
+  * {
+    box-sizing: border-box;
+  }
+}
+#content {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/potatoes.jpg");
+}
+header {
+  max-width: 100%;
+  height: 120px;
+  font-size: 4em;
+  text-align: center;
+  line-height: 120px;
+  color: white;
+  text-shadow: 5px 5px .1em;
+  background-color: rgba(4, 0, 255, .1);
+}
+nav {
+  max-width: 100%;
+  height: 120px;
+  padding: 0 20%;
+  background-color: rgba(255, 0, 0, .1);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  div {
+    text-align: center;
+  }
+}
+section {
+  max-width: 100%;
+  min-height: 400px;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, .4);
+  display: grid;
+}
+.home {
+  align-items: center;
+  article {
+    text-align: center;
+    font-size: 2em;
+    color: black;
+  }
+  p {
+    line-height: 1.4;
+  }
+}
+.menu {
+  grid-template-columns: 30% 30% 30%;
+  justify-content: center;
+  align-items: center;
+  article {
+    height: 200px;
+    margin: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+  }
+  div {
+    height: 100px;
+    width: 120px;
+    margin: 20px auto;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-size: cover;
+  }
+  div.mashed {
+    background-image: url("../img/mashed.jpg");
+  }
+  div.fried {
+    background-image: url("../img/fried.jpeg");
+  }
+  div.boiled {
+    background-image: url("../img/boiled.jpg");
+  }
+  p {
+    text-align: center;
+    line-height: 1.4;
+  }
+}
+.contact {
+  grid-template-columns: 30%;
+  grid-template-rows: 100px 100px;
+  justify-content: center;
+  padding-top: 50px;
+  article {
+    margin: 20px;
+    text-align: left;
+  }
+  h2 {
+    font-size: 1.5em;
+    line-height: 1.5;
+  }
+  p {
+    margin-left: 2em;
+  }
+}
