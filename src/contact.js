@@ -1,24 +1,21 @@
+const createArticle = (title, par) => {
+  const article = document.createElement('article');
+  const h2 = document.createElement('h2');
+  const p = document.createElement('p');
+  h2.textContent = title;
+  p.textContent = par;
+  article.appendChild(h2);
+  article.appendChild(p);
+  return article;
+}
+
 const insertContact = () => {
   const section = document.querySelector('section');
+  const articles = [];
   section.classList.add('contact');
-
-  const article1 = document.createElement('article');
-  const h2_1 = document.createElement('h2');
-  const p1 = document.createElement('p');
-  h2_1.textContent = 'Address';
-  p1.textContent = 'Potato Av.42';
-  article1.appendChild(h2_1);
-  article1.appendChild(p1);
-  section.appendChild(article1);
-
-  const article2 = document.createElement('article');
-  const h2_2 = document.createElement('h2');
-  const p2 = document.createElement('p');
-  h2_2.textContent = 'Email';
-  p2.textContent = 'potato@potato.com';
-  article2.appendChild(h2_2);
-  article2.appendChild(p2);
-  section.appendChild(article2);
+  articles.push(createArticle('Address', 'Potato Av.42'));
+  articles.push(createArticle('Email', 'potato@potato.com'));
+  articles.forEach(article => section.appendChild(article));
 }
 
 export { insertContact }
