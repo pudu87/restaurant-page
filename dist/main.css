@@ -38,6 +38,9 @@ nav {
     border: 1px solid whitesmoke;
     border-radius: 5px; }
 
+.selected {
+  text-decoration: underline; }
+
 section {
   max-width: 100%;
   min-height: 400px;

@@ -11,16 +11,30 @@ const content = {
 initContent();
 insertHome();
 
-const nav = document.querySelector('nav');
-nav.childNodes.forEach(div => {
-  div.addEventListener('click', selectTab);
-})
+const index = (function() {
 
-const section = document.querySelector('section');
-function selectTab(e) {
-  section.textContent = '';
-  section.classList = '';
-  let tab = e.target.textContent;
-  console.log(tab)
-  content['insert' + tab]();
-}
+  const nav = document.querySelector('nav');
+  const section = document.querySelector('section');
+
+  const selectTab = (e) => {
+    removeContent();
+    unstyleTabs();
+    let tab = e.target;
+    tab.classList.add('selected');
+    content['insert' + tab.textContent]();
+  }
+  const removeContent = () => {
+    section.textContent = '';
+    section.classList = '';
+  }
+  const unstyleTabs = () => {
+    nav.childNodes.forEach(div => {
+      div.classList.remove('selected')
+    })
+  }
+
+  nav.childNodes.forEach(div => {
+    div.addEventListener('click', selectTab)
+  })
+
+})();
