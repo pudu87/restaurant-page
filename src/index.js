@@ -1,1 +1,3 @@
-console.log('test')
+import { initContent } from './init.js';
+
+initContent();
